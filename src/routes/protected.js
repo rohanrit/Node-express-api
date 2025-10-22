@@ -15,4 +15,11 @@ router.get('/profile', authMiddleware, async (req, res) => {
   }
 });
 
+router.put('/profile', authMiddleware, async (req, res) => {
+  const { username } = req.body;
+  // Update user in DB using req.user.id
+  // ... (database logic)
+  res.json({ message: 'Profile updated' });
+});
+
 export default router;

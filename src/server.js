@@ -10,7 +10,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors()); // Enable CORS
+app.use(cors({
+  origin: ['https://yourfrontend.com', 'http://localhost:3001'],  // Array of allowed origins
+  methods: ['GET', 'POST'],  // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'],  // Allowed headers
+})); // Enable CORS
 app.use(express.json()); // Parse JSON bodies
 app.use(express.static('public'));  // Serve static files from public/ folder
 

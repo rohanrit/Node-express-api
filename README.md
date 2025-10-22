@@ -11,5 +11,9 @@ Step 2:
 npm i express zod dotenv cors @libsql/client
 
 ###
-Step 3: 
+Step 4: 
+npm i mysql2 bcryptjs jsonwebtoken express-rate-limit
+
+###
+Step 4: 
 npm i -D nodemon

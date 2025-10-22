@@ -1,6 +1,5 @@
 # Node-express-api
 Production ready basic api with node, express, zod, cors, env, nodemon
-Reference: https://www.youtube.com/watch?v=sOJcxYIma3Y&t=1115s
 
 ###
 Step 1:
@@ -17,3 +16,8 @@ npm i mysql2 bcryptjs jsonwebtoken express-rate-limit
 ###
 Step 4: 
 npm i -D nodemon
+
+###
+Step 5: Generate new  JWT_SECRET (run in terminal)
+node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+
